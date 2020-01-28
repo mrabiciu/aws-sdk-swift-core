@@ -50,7 +50,7 @@ public struct AWSResponse {
         }
         
         if raw {
-            return .buffer(data)
+            return .buffer(body)
         }
         
         switch serviceProtocolType {
@@ -72,7 +72,7 @@ public struct AWSResponse {
                 }
                 
             default:
-                responseBody = .buffer(data)
+                responseBody = .buffer(body)
             }
         }
         
